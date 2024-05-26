@@ -11,6 +11,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         software-properties-common \
         git \
+        byobu \
+        vim \
         build-essential \
         cmake \
         libeigen3-dev \
@@ -51,8 +53,9 @@ RUN apt-get update && \
         libssl-dev \
         libudev-dev \
         libusb-1.0-0-dev \
+        librealsense2-dkms \
         librealsense2-dev \
         librealsense2-utils \
-        ros-${ROS_DISTRO}-realsense2-camera &&  \
+        ros-${ROS_DISTRO}-realsense2* &&  \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
