@@ -8,10 +8,10 @@ File.version: "1.0"
 Camera.type: "Rectified"
 
 # Rectified Camera calibration (OpenCV)
-Camera1.fx: 382.613
-Camera1.fy: 382.613
-Camera1.cx: 320.183
-Camera1.cy: 236.455
+Camera1.fx: 377.229220831
+Camera1.fy: 377.486565843
+Camera1.cx: 326.351864976
+Camera1.cy: 239.659665361
 
 Stereo.b: 0.094923
 
@@ -39,7 +39,7 @@ IMU.T_b_c1: !!opencv-matrix
           0.00000000,  0.00000000,  0.00000000,  1.00000000]
 
 # Do not insert KFs when recently lost
-IMU.InsertKFsWhenLost: 0
+IMU.InsertKFsWhenLost: 1
 
 # IMU noise (Use those from VINS-mono)
 IMU.NoiseGyro: 0.187 # 2.44e-4 #1e-3 # rad/s^0.5
