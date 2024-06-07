@@ -7,13 +7,11 @@ File.version: "1.0"
 
 Camera.type: "Rectified"
 
-# Rectified Camera calibration (OpenCV)
+# Right Camera calibration and distortion parameters (OpenCV)
 Camera1.fx: 377.229220831
 Camera1.fy: 377.486565843
 Camera1.cx: 326.351864976
 Camera1.cy: 239.659665361
-
-Stereo.b: 0.094923
 
 # Camera resolution
 Camera.width: 640
@@ -25,8 +23,11 @@ Camera.fps: 30
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
 Camera.RGB: 1
 
-# Close/Far threshold. Baseline times.
 Stereo.ThDepth: 40.0
+Stereo.b: 0.094923
+
+# Depth map values factor
+RGBD.DepthMapFactor: 1000.0
 
 # Transformation from body-frame (imu) to left camera
 IMU.T_b_c1: !!opencv-matrix
@@ -38,8 +39,9 @@ IMU.T_b_c1: !!opencv-matrix
          -0.00835054,  0.01197718,  0.99989340,  0.02575617,
           0.00000000,  0.00000000,  0.00000000,  1.00000000]
 
+
 # Do not insert KFs when recently lost
-# IMU.InsertKFsWhenLost: 0
+IMU.InsertKFsWhenLost: 0
 
 # IMU noise (Use those from VINS-mono)
 IMU.NoiseGyro: 0.187 # 2.44e-4 #1e-3 # rad/s^0.5
