@@ -5,4 +5,4 @@ docker run --network host --privileged -it --rm \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 -e DISPLAY=$DISPLAY \
 --name orbslam3-container \
-orbslam3
+orbslam3-ros
